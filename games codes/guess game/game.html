@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guessing Game</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .guess-input {
+      padding: 5px;
+      margin: 10px;
+      width: 100px;
+    }
+
+    .result {
+      color: #333;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guessing Game</h1>
+  <p>Guess a number between 1 and 100:</p>
+  <input type="number" id="guessInput" class="guess-input">
+  <br>
+  <button onclick="checkGuess()">Submit</button>
+  <p id="result" class="result"></p>
+
+  <script>
+    // Generate a random number between 1 and 100
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const guessInput = document.getElementById('guessInput');
+      const result = document.getElementById('result');
+
+      const userGuess = parseInt(guessInput.value);
+      attempts++;
+
+      if (isNaN(userGuess)) {
+        result.textContent = 'Invalid input. Please enter a number.';
+      } else if (userGuess === randomNumber) {
+        result.textContent = `Congratulations! You guessed the number in ${attempts} attempts.`;
+        guessInput.disabled = true;
+      } else if (userGuess < randomNumber) {
+        result.textContent = 'Too low. Try again.';
+      } else if (userGuess > randomNumber) {
+        result.textContent = 'Too high. Try again.';
+      }
+      
+      guessInput.value = '';
+      guessInput.focus();
+    }
+  </script>
+</body>
+</html>

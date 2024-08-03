@@ -1,0 +1,145 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f8;
+}
+
+.btn{
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #222;
+    border: 3px solid #222;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    font-weight: bold;
+    padding: 1.5rem 3rem;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    background-color: #222;
+    color: #f1f5f8;
+    transition: all 0.7s;
+    border-radius: 50px;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    background: #f1f5f8;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+nav .nav-center{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 0;
+    text-transform: capitalize;
+}
+
+nav .nav-center h4{
+    margin: 5;
+    padding: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1099ae;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+nav .nav-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+nav .nav-links a{
+    text-decoration: none;
+    color: #000000;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    transition: all 0.3s;
+    font-size: large;
+}
+
+nav .nav-links a:hover{
+    color: #4078c0;
+    transition: all 0.3s;
+}
+
+nav .nav-center h4{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+}
+
+.container{
+    text-align: center;
+    width: 90vw;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.container h2{
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    background-color: #222;
+    margin: 2rem 0;
+    transition: all 0.3s;
+    color: #f1f5f8;
+    border-radius: 5%;
+}
+
+.container p{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.color-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color{
+    font-size: 3rem;
+    background-color: #222;
+    color: #0091ff;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5%;
+    transition: all 0.3s;
+}

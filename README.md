@@ -1,3 +1,3 @@
 # Details
 
-This is my Front-end Projects 
+This are my Front-end Projects 

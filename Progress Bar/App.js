@@ -4,6 +4,7 @@ const next = document.getElementById('Next');
 const circles = document.querySelectorAll('.circle');
 
 let currentActive = 1;
+prev.disabled = true;
 
 next.addEventListener('click', () => {
     currentActive++;

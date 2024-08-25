@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Popup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="contain-container">
+            <h1>Welcome to the real world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at, necessitatibus inventore, numquam, sit veniam repellendus quia minus magni laudantium officiis cumque eius rem similique aperiam non esse enim iure.</p>
+            <button class="cta-btn" id="open">Sign up</button>
+        </div>
+    </header>
+
+    <section class="modal-container" id="modal">
+        <section class="modal">
+            <button class="close-btn" id="close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <h1>Sign up</h1>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="e-mail">Email</label>
+                        <input type="email" id="e-mail" placeholder="Enter your Email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

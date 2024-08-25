@@ -1,0 +1,206 @@
+:root{
+    /* COLORS */
+
+    /*BACKGROUND COLORS*/
+    --bg-orange:hsl(25,97%,53%);
+    --bg-white-alpha-4:hsla(0,0%,100%,0.04);
+    --bg-dark-blue: hsl(213,19%,18%);
+    --bg-rich-black-fogra-29:hsla(215,27%,12%,1);
+    --bg-very-dark-blue:hsl(216,12%,8%);
+
+    /*TEXT COLORS*/
+    --text-white:hsl(0,0%,100%);
+    --text-light-gray:hsl(217,12%,63%);
+    --text-medium-gray:hsl(216,12%,54%);
+    --text-orange:hsl(25,97%,53%);
+
+    /* GRADIENT COLOR */
+    --gradient-1:radial-gradient(circle at top, hsla(0,0%,100%,0.05)0%,transparent 80%);
+
+    /* TYPOGRAPHY */
+    /* FONT FAMILY*/
+    --font-family: 'Overpass', sans-serif;
+
+    /* FONT SIZE */
+    --fontSize-title: 2.4rem;
+    --fontSize-paragraph: 1.4rem;
+
+    /*BORDER RADIUS*/
+    --radius-pill:100px;
+    --radius-circle:50%;
+
+    /*TRANSITION*/
+    --transition-1: 100ms ease;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{ list-style: none;}
+
+a,
+img,
+span,
+button{display: block;}
+
+img{height: auto;}
+
+button{
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bg-very-dark-blue);
+    color: var(--text-light-gray);
+    font-family: var(--font-family);
+    font-size: var(--fontSize-paragraph);
+    line-height: 1.5;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.rated-state{display: none;}
+
+.card{
+    max-width: 410px;
+    margin-inline: auto;
+    background-color: var(--bg-rich-black-fogra-29);
+    background-image: var(--gradient-1);
+    border-radius: 15px;
+    padding:24px;
+}
+
+.card-icon{
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-dark-blue);
+    border-radius: var(--radius-circle);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon img{ width: 15px;}
+
+.card-title{
+    color: var(--text-white);
+    font-size: var(--fontSize-title);
+    margin-block: 20px 15px;
+    line-height: 1;
+}
+
+.card .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 25px 20px;
+}
+
+.icon-btn{
+    width: 35px;
+    height: 35px;
+    background-color: var(--bg-dark-blue);
+    border-radius: var(--radius-circle);
+    text-align: center;
+    color: var(--text-medium-gray);
+    transition: var(--transition-1);
+}
+
+.icon-btn:is(:hover, :focus-visible){
+    background-color: var(--text-medium-gray);
+    color: var(--text-white);
+}
+
+.icon-btn.selected{
+    background-color: var(--bg-orange);
+    color: var(--text-white);
+}
+.submit-btn{
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--radius-pill);
+    background-color: var(--bg-orange);
+    color: var(--text-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: var(--transition-1);
+}
+
+.submit-btn:is(:hover, :focus-visible){
+    background-color: var(--text-white);
+    color: var(--text-orange);
+}
+
+.rated .rating-state{display: none;}
+
+.rated {padding-block: 30px 25px;}
+
+.rated .rated-state{
+    display: block;
+    text-align: center;
+}
+
+.card-img{
+    width: 150px;
+    margin-inline: auto;
+    margin-block-end: 20px;
+}
+
+.card-subtitle{
+    color: var(--text-orange);
+    background-color: var(--bg-white-alpha-4);
+    border-radius: var(--radius-pill);
+    padding: 10px 15px 8px;
+    line-height: 1;    
+    margin-inline: auto;
+}
+
+.card-subtitle span{display: inline;}
+
+.rated .card-title{margin-block: 25px 15px;}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px){
+
+    :root{
+        --fontSize-title: 2.8rem;
+        --fontSize-Body: 1.6rem;
+    }
+
+    .card{
+        padding:30px;
+        border-radius: 30px;
+    }
+
+    .card-icon,
+    .icon-btn{
+        width:50px;
+        height: 50px;
+    }
+
+    .card-icon img{ width: max-content;}
+
+    .icon-btn { line-height: 54px;}
+
+    .rated{padding: 40px 35px 35px;}
+
+    .card-img{width: max-content;}
+
+    .rated .card-title{margin-block: 30px 15px;}
+}

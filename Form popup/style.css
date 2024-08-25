@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --modal-duration: 1s;
+}
+
+body{
+    font-family:sans-serif;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+header{
+    background: url(C:\Users\my\Downloads\pexels-bkrustev-225203.jpg);
+}
